@@ -11,12 +11,11 @@ export const Card = styled.div`
   transition: all 0.3s ease;
   padding: 1.5rem;
   z-index: -1;
-  cursor: pointer;
 
   &:hover {
     transform: translateY(2px);
     box-shadow: none;
-    filter: none;
+    cursor: pointer;
   }
 `;
 
