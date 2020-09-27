@@ -28,7 +28,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix"
+      "yarn lint"
     ]
   },
   "eslintConfig": {

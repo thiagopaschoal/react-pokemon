@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import PokeCard from './componentes/PokeCard/PokeCard';
-import styled from 'styled-components';
 import Header from './componentes/Header/Header';
-
-const Grid = styled.div`
-  margin: 80px 1.5rem 1.5rem 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(6, 2fr);
-  grid-gap: 1rem;
-  grid-row-gap: 1rem;
-
-  @media (max-width: 800px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`;
+import Layout from './componentes/Layout/Layout';
+import PokeCard from './componentes/PokeCard/PokeCard';
 
 const App = () => {
   const url =
@@ -38,11 +26,11 @@ const App = () => {
   return (
     <>
       <Header />
-      <Grid>
+      <Layout>
         {pokemons.map((pokemon) => (
           <PokeCard {...pokemon} />
         ))}
-      </Grid>
+      </Layout>
     </>
   );
 };
